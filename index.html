@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en-US">
 <head>
   <title>Salvaged Boat Anchors</title>
+  <meta charset="utf-8">
+  <meta name="author" content="Steve Gallant">
+  <meta Name="description" content="Sample responsive product landing page">
   <link href="https://fonts.googleapis.com/css?family=Crete+Round|Raleway" rel="stylesheet">
-  <link href="./stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -13,21 +17,24 @@
   <img id="header-img" alt="company logo graphic" src="https://manula.r.sizr.io/large/user/6355/img/anchor-clip.jpg">
   <h1>Salvaged Boat Anchors</h1>
   <nav id="nav-bar">
-    <li><a  class="nav-link" href="#features">Features</a></li>
-    <li><a  class="nav-link" href="#how">How It Works</a></li>
+    <li><a class="nav-link" href="#">Home</a></li>
+    <li><a class="nav-link" href="#features">Features</a></li>
+    <li><a class="nav-link" href="#how">How It Works</a></li>
     <li><a class="nav-link"  href="#pricing">Pricing</a></li>
   </nav>
 </header>
 
+<div id="bg-wrap">
 <section id="intro">
-  <h2>One sailor's lost anchor is another sailor's...anchor</h2>
-  <form id="form" action="https://www.freecodecamp.com/email-submit">
+  <h2>"One sailor's lost anchor is another sailor's...anchor"</h2>
+  <form id="form" action="#">
     <input id="email" type="email" name="email" placeholder="Enter your email address">
-    <input id="submit" type="submit" name="email" value="Get Started">
+    <input id="submit" type="submit" name="email" value="Full Ahead!">
   </form>
 </section> <!-- end intro -->
 
 <section id="features">
+  <div class="buffer"></div>
   <div class="feature-wrap">
     <div class="feature-icon">
       <i class="fas fa-anchor fa-2x"></i>
@@ -44,7 +51,7 @@
     </div> <!-- end icon -->
       <div class="feature-blurb">
       <h3>Expert touch, local economy</h3>
-      <p>All anchors are salvaged by local divers & inspected by experienced mariners
+      <p>All anchors are salvaged by local divers & inspected by grizzled mariners
       </p>
   </div> <!-- end blurb -->
   </div> <!-- end wrap -->
@@ -59,8 +66,10 @@
     </div> <!-- end blurb -->
   </div> <!-- end wrap -->
 </section> <!-- end features -->
+</div> <!-- end bg-wrap -->
 
 <section id="how">
+  <div class="buffer"></div>
   <div id="div-video">
     <iframe id="video" width="320" height="240" src="https://www.youtube.com/embed/kAJdRuno9Uc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
     </iframe>
@@ -68,6 +77,7 @@
 </section> <!-- end how -->
 
 <section id="pricing">
+  <div class="buffer"></div>
   <div class="price-option">
     <div class="price-title">Danforth Anchors</div>
     <h2>$30-100</h2>
