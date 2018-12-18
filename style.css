@@ -84,7 +84,14 @@ h2 {
   border-radius: 5px;
   text-align: center;
   background: #b3ccff;
+  color: black;
 
+}
+
+#nav-bar li:hover {
+  color: white;
+  background-color: navy;
+  transition: background-color 1s;
 }
 
 
@@ -110,17 +117,30 @@ h2 {
   margin: 50px 0px 20px;
 }
 
+
 #intro p {
+  font-size: 1.25em;
+  text-shadow: 2px 2px 4px white;
+}
+
+#cta {
+  margin-top: 20px;
+}
+
+#intro label {
   margin-bottom: 20px;
   font-size: 1.5em;
   color: white;
-
 }
 
 #email {
+  display: block;
   width: 100%;
   max-width: 280px;
+  margin: 10px auto;
   padding: 5px;
+  border: none;
+  border-radius: 5px;
 }
 
 #submit {
@@ -141,6 +161,20 @@ h2 {
 .buffer {
   height: 230px;
 }
+
+#features {
+  /* padding-top: 230px; */
+}
+
+#features::before {
+  display: block;
+  content: " ";
+  margin-top: -210px;
+  height: 210px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 
 #features h3 {
   text-shadow: 1px 1px black;
@@ -307,13 +341,13 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
-  /* #nav-bar li {
-  float: left;
-  margin-top: 20px;
-  } */
 
   #intro {
     margin-top: 70px;
+  }
+
+  #cta {
+    margin-top: 100px;
   }
 
   .buffer {
