@@ -1,4 +1,4 @@
-/* general styling */
+/****** general styling ******/
 
 * {
   margin: 0;
@@ -69,6 +69,7 @@ h2 {
   font-size: .75em;
   font-style: italic;
 }
+
 #nav-bar {
   display: flex;
   flex-direction: column;
@@ -85,7 +86,6 @@ h2 {
   text-align: center;
   background: #b3ccff;
   color: black;
-
 }
 
 #nav-bar li:hover {
@@ -93,7 +93,6 @@ h2 {
   background-color: navy;
   transition: background-color 1s;
 }
-
 
 /****** Intro and CTA ******/
 
@@ -158,29 +157,21 @@ h2 {
 
 /****** features ******/
 
-.buffer {
-  height: 230px;
-}
-
-#features {
-  /* padding-top: 230px; */
-}
-
 #features::before {
   display: block;
   content: " ";
-  margin-top: -210px;
-  height: 210px;
+  margin-top: -207px;
+  height: 217px;
   visibility: hidden;
   pointer-events: none;
 }
-
 
 #features h3 {
   text-shadow: 1px 1px black;
 }
 .feature-wrap {
   display: flex;
+  justify-content: center;
 }
 
 .feature-icon {
@@ -194,31 +185,79 @@ h2 {
 .feature-blurb {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
   height: 100px;
   color: white;
   text-align: center;
 }
 
-/* Pricing Section */
+/****** Video Section ******/
+
+#vid-section {
+  min-height: 100vh;
+}
+
+#vid-section::before {
+  display: block;
+  content: " ";
+  margin-top: -207px;
+  height: 207px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#vid-section p {
+  margin: 20px 0px;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+#div-video {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+#div-video iframe {
+  width: 100%;
+  max-width: 90%;
+}
+
+/****** Pricing Section ******/
 
 #pricing {
-  display: flex;
-  flex-direction: column;
+  display: flex-inline;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   justify-content: center;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+#pricing::before {
+  display: block;
+  content: " ";
+  margin-top: -207px;
+  height: 207px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.price-option:first-child {
   margin-top: 50px;
 }
 
-.price-option {
-  display: flex;
+.price-option {          /* PICK UP HERE */
+  display: flex-inline;
   flex-direction: column;
   align-items: center;
   text-align: center;
   width: 100%;
   max-width: 300px;
   margin: 0 auto 10px auto;
-  border: 1px solid #000;
-  border-radius: 3px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #404040;
 }
 
 .price-title {
@@ -235,17 +274,14 @@ input[type="submit"] {
   margin: 30px 10px 10px;
   text-transform: uppercase;
   border: none;
+  border-radius: 5px;
   color: white;
   background-color: blue;
 }
 
-#div-video {
-  display: flex;
-  justify-content: center;
-}
-#div-video iframe {
-  width: 100%;
-  max-width: 90%;
+.button:hover {
+  background-color: navy;
+  transition: background-color 1s;
 }
 
 /****** footer ******/
@@ -283,6 +319,7 @@ footer {
     flex-direction: row;
     justify-content: space-around;
   }
+
   #nav-bar li {
     display: inline-block;
     width: 80px;
@@ -291,24 +328,41 @@ footer {
   #intro {
     margin-top: 130px;
   }
-}
+
+  #features::before {
+    display: block;
+    content: " ";
+    margin-top: -132px;
+    height: 142px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #vid-section::before {
+    display: block;
+    content: " ";
+    margin-top: -132px;
+    height: 132px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #pricing::before {
+    display: block;
+    content: " ";
+    margin-top: -132px;
+    height: 132px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}  /* end min-width 460 */
 
 @media screen and (min-width: 650px) {
-  /* #nav-bar {
-    float: right;
-    margin-right: 30px;
-  } */
-
   #nav-bar {
     display: flex-inline;
     flex-direction: column;
     float: right;
     margin-right: 30px;
-  }
-
-  #nav-bar li {
-    /* display: block; */
-    /* width: 100px; */
   }
 
   #wrapper {
@@ -317,10 +371,6 @@ footer {
 
   #intro {
     margin-top: 120px;
-  }
-
-  .buffer {
-    height: 200px;
   }
 
   #div-video iframe {
@@ -338,10 +388,9 @@ footer {
     text-align: left;
     justify-content: left;
   }
-}
+}   /* end min-width 650 */
 
 @media screen and (min-width: 800px) {
-
   #intro {
     margin-top: 70px;
   }
@@ -350,17 +399,43 @@ footer {
     margin-top: 100px;
   }
 
-  .buffer {
-    height: 100px;
-  }
-
-  #pricing {
+  /* #pricing {
     flex-direction: row;
     justify-content: center;
-  }
+    flex-
+  } */
 
-  .price-option {
+  /* .price-option {
     width: calc(100% / 3);
     margin: 10px;
+  } */
+}   /* end min-width 800 */
+
+@media screen and (min-width: 864px) {
+  #features::before {
+    display: block;
+    content: " ";
+    margin-top: -94px;
+    height: 104px;
+    visibility: hidden;
+    pointer-events: none;
   }
-}
+
+  #vid-section::before {
+    display: block;
+    content: " ";
+    margin-top: -94px;
+    height: 94px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #pricing::before {
+    display: block;
+    content: " ";
+    margin-top: -94px;
+    height: 94px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}   /* end min-width 864 */
