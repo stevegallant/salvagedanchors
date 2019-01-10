@@ -37,6 +37,8 @@ h2 {
   position: relative;
   background-color: #b3ccff;
   width: 100%;
+  max-width: 1290px;
+  margin: 0 auto;
 }
 
 /****** header styling ******/
@@ -48,9 +50,9 @@ h2 {
   left: 0;
   right: 0;
   width: 100%;
-  min-width: 360px;
+  min-width: 320px;
   min-height: 70px;
-  padding: 10px 20px;
+  padding: 10px 0px;
 }
 
 #header-img {
@@ -61,6 +63,7 @@ h2 {
   border-radius: 3px;
   box-shadow: 4px 4px #b3ccff;
 }
+
 #slogan {
     display: inline-block;
 }
@@ -70,17 +73,19 @@ h2 {
   font-style: italic;
 }
 
+#nav-wrapper {
+  margin: 0 auto;
+}
+
 #nav-bar {
   display: flex;
   flex-direction: column;
-  list-style: none;
-  margin-left: 20px;
 }
 
-#nav-bar li {
+#nav-bar span {
   display: block;
-  width: 100%;
-  margin: 5px;
+  width: 75%;
+  margin: 5px auto;
   padding: 5px;
   border-radius: 5px;
   text-align: center;
@@ -88,7 +93,7 @@ h2 {
   color: black;
 }
 
-#nav-bar li:hover {
+#nav-bar span:hover {
   color: white;
   background-color: navy;
   transition: background-color 1s;
@@ -98,6 +103,8 @@ h2 {
 
 #bg-wrap {
   background: no-repeat url("https://photos.smugmug.com/Web-Dev/Portfolio-Site/i-xk9kkRk/0/7c580d19/X2/iPAdImv-X2.jpg");
+  background-size: cover;
+  margin: 0 auto;
 }
 
 #intro {
@@ -160,8 +167,8 @@ h2 {
 #features::before {
   display: block;
   content: " ";
-  margin-top: -207px;
-  height: 217px;
+  margin-top: -200px;
+  height: 232px;
   visibility: hidden;
   pointer-events: none;
 }
@@ -221,6 +228,7 @@ h2 {
 #div-video iframe {
   width: 100%;
   max-width: 90%;
+  border: none;
 }
 
 /****** Pricing Section ******/
@@ -238,8 +246,8 @@ h2 {
 #pricing::before {
   display: block;
   content: " ";
-  margin-top: -207px;
-  height: 217px;
+  margin-top: -217px;
+  height: 232px;
   visibility: hidden;
   pointer-events: none;
 }
@@ -319,9 +327,10 @@ footer {
     justify-content: space-around;
   }
 
-  #nav-bar li {
+  #nav-bar span {
     display: inline-block;
     width: 80px;
+    margin-right: 5px;
   }
 
   #intro {
@@ -357,12 +366,6 @@ footer {
 }  /* end min-width 460 */
 
 @media screen and (min-width: 650px) {
-  #nav-bar {
-    display: flex-inline;
-    flex-direction: column;
-    float: right;
-    margin-right: 30px;
-  }
 
   #wrapper {
     margin-top: 100px;
@@ -390,6 +393,14 @@ footer {
 }   /* end min-width 650 */
 
 @media screen and (min-width: 800px) {
+  #nav-bar {
+    display: inline-flex;
+    justify-content: space-evenly;
+    float: right;
+    min-width: 50%;
+    margin-right: 15px;
+  }
+
   #intro {
     margin-top: 70px;
   }
